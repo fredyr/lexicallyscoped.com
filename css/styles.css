@@ -1,0 +1,113 @@
+html { -webkit-font-smoothing: antialiased; }
+* { margin: 0; }
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    color: #343434;
+    /*background: #F0F0F0;*/
+    font-size: 1.15em;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    margin-bottom: 0.3em;
+}
+h4 {
+    color: #666;
+    margin-bottom: 0.3em;
+}
+
+aside > ul { padding: 0; }
+aside > ul li {
+    margin-right: 0.5em;
+    list-style-type: none;
+    float: left;
+}
+
+.highlight {
+    font-size: 1.2em;
+    line-height: 1.1em;
+    background: #242227;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.no-decoration { text-decoration: none; }
+
+
+
+hr {
+    border: 0;
+    background-color: lightgray;
+    height: 1px;
+    margin: 2em 0;
+}
+
+a, a:visited, a:active { color: #454545; }
+
+p {
+    line-height: 1.3em;
+    margin-bottom: 1em;
+}
+
+blockquote {
+    background-color: #ede3e1;
+    padding: 1em 0 1em 1em;
+    margin: 1em 0;
+    border-left: 4px solid #D93117;
+}
+
+.logo {
+    height: 125px;
+    display: block;
+    margin: 1em 0;
+}
+
+.button {
+    font-size: 1em;
+    color: white!important;
+    padding: 0.2em 0.75em;
+    margin: 0.1em;
+    display: inline-block;
+    text-decoration: none;
+}
+.tag {
+    font-size: 0.7em;
+    color: white!important;
+    padding: 0.1em 0.6em;
+    margin: 0.1em;
+    display: inline-block;
+    text-decoration: none;
+}
+.date {
+    font-size: 1em;
+    color: white!important;
+    padding: 0.25em 0.75em;
+    text-decoration: none;
+}
+.red { background-color: #D93117; }
+.white { color: black!important; background-color: white; }
+.black { background-color: black; }
+.gray { background-color: gray; }
+.floating-left { float: left; }
+.floating-right { float: right; }
+
+aside {
+    position: fixed;
+    padding: 0 0 0 1em;
+    height: 100%;
+    min-height: 640px;
+    width: 250px;
+    border-right: 1px solid lightgray;
+}
+
+.container {
+    margin-left: 310px;
+    margin-right: 30px;
+    position: relative;
+}
+article { margin: 1em 0; font-size: 100%; }
+
+section {
+    /*padding-top: 20px;*/
+}

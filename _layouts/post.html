@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<article>
+    <h2 class="floating-left">{{ page.title }}</h2>
+    <span class="date red floating-right">{{ page.date | date_to_long_string }}</span> 
+    <p style="clear: both;"></p>
+    {{ content }}
+
+    <hr>
+    <a href="/" class="button gray floating-right">&larr;&nbsp; Go Back</a>
+</article>
