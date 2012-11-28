@@ -6,21 +6,22 @@ title: An introduction to Groovy
 
 ### Groovy, the Way Java Should Be
 
-Okay, so I'm going to kick off this blog with a write up of an Groovy introduction training session I did a while back. 
+Okay, so I'm going to kick off this blog with a write up of a [Groovy](http://groovy.codehaus.org/) introduction training session I did a while back. 
 
-The title above isn't mine (although I wouldn't mind). It's actually from the excellent book [Groovy Recipes: Greasing the wheels of Java](http://pragprog.com/book/sdgrvr/groovy-recipes) by Scott Davies. 
+The title above isn't mine (although I wouldn't mind if it was). It's actually from the excellent book [Groovy Recipes: Greasing the wheels of Java](http://pragprog.com/book/sdgrvr/groovy-recipes) by Scott Davies. 
 
-Groovy is, if you don't already know, a dynamic language who runs on the JVM. It was designed to:
+Groovy, if you don't already know, is a dynamic language who runs on the JVM. It was designed to:
 
 #### Have good interopability with Java
 
-Groovy is hosted on the JVM, sharing the JVM type system making interopability simpler. 
-Groovy classes are Java classes. Groovy arrays are Java arrays, and so on. In fact, most Java code is also valid Groovy code.
+Groovy is designed to be hosted on the JVM, sharing the JVM type system making interopability simpler. 
+Groovy classes are Java classes. Groovy arrays are Java arrays, and so on. In fact, most Java code is also valid Groovy code. [Clojure](http://clojure.org/jvm_hosted) is another example of a language that's hosted on the JVM, in contrast to for example JRuby and Jython who are ports of these languages for the JVM.
 
 #### Reducing language verbosity
 By adding syntactic sugar for common idioms the code can both be much more concise but also more declarative. 
 #### [Duck typing](http://en.wikipedia.org/wiki/Duck_typing)
-Groovy makes Java's static type system optional. Runtime instead of compile contracts give you powerful possibilies for polymorphism and avoids the type declaration verbosity.
+Groovy makes Java's static type system optional. Since type checking is done at runtime instead of at compilation we can avoid the verbose type declarations in the code and also open doors for powerful polymorphism possibilities.
+
 
 #### Add features that were missing in Java
 And the good thing about Groovy is that you don't have to wait for the next Java version or what ever to benefit from all the good features like closures, built-in literals for lists, maps and more.
@@ -28,7 +29,7 @@ And the good thing about Groovy is that you don't have to wait for the next Java
 
 ### [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) Goodness    
 
-This tutorial is based heavily on code samples so that you will be able to follow and test most of the code samples in the Groovy Console as you read along. Poking around and testing new stuff hands on, at least for me, is a great way to learn.
+This tutorial is based heavily on code samples so that you will be able to follow and test most of the code samples in the Groovy Console (either in the standard [Groovy installation](http://groovy.codehaus.org/) or in the [Groovy Web Console](http://groovyconsole.appspot.com/)) as you read along. Poking around and testing new stuff hands on is after all a great way to learn.
 
 Let's wait no further, and look at some basic Groovy constructs!
 
@@ -163,7 +164,7 @@ def value =
 
 ### Closures
 
-In Groovy, functions are first class object, which means that you can treat them like any other value. Pass them as arguments, return function values from other functions etc.
+In Groovy, functions are first class objects, which means that you can treat them like any other value. Pass them as arguments, return function values from other functions etc.
 
 We have already sneaked in some closures earlier in the ``each`` loops by the way.
 
