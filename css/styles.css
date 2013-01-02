@@ -115,8 +115,8 @@ aside {
         width: auto;
         margin: 30px;
         padding: 0;
-        min-height: auto;
-        height: auto;
+        min-height: inherit!important;
+        height: auto!important;
         border-bottom: 1px solid lightgray;
     }
 
