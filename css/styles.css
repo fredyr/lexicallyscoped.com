@@ -106,6 +106,32 @@ aside {
     margin-right: 30px;
     position: relative;
 }
+
+
+@media (max-width: 767px) {
+    aside {
+        position: relative;
+        border: none;
+        width: auto;
+        margin: 30px;
+        padding: 0;
+        min-height: auto;
+        height: auto;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+    .container {
+        margin: 30px;
+        /*top: 80px;*/
+        width: auto;
+        /*text-align: center;*/
+    }
+}
+
+
 article { margin: 1em 0; font-size: 100%; }
 
 section {
