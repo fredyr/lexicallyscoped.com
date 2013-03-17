@@ -17,6 +17,10 @@ h4 {
     margin-bottom: 0.3em;
 }
 
+article > ul {
+    margin: 1em;
+}
+
 aside > ul { padding: 0; }
 aside > ul li {
     margin-right: 0.5em;
@@ -52,7 +56,7 @@ p {
 
 blockquote {
     background-color: #ede3e1;
-    padding: 1em 0 1em 1em;
+    padding: 1em 0 .1em 1em;
     margin: 1em 0;
     border-left: 4px solid #D93117;
 }
@@ -66,8 +70,8 @@ blockquote {
 .button {
     font-size: 1em;
     color: white!important;
-    padding: 0.2em 0.75em;
-    margin: 0.1em;
+    padding: 0.3em 0.75em;
+    /*margin: 0.1em;*/
     display: inline-block;
     text-decoration: none;
 }
@@ -83,6 +87,7 @@ blockquote {
     font-size: 1em;
     color: white!important;
     padding: 0.25em 0.75em;
+    display: inline-block;
     text-decoration: none;
 }
 .red { background-color: #D93117; }
@@ -136,4 +141,8 @@ article { margin: 1em 0; font-size: 100%; }
 
 section {
     /*padding-top: 20px;*/
+}
+/* Embedded youtube clips */
+iframe {
+    margin: 1em 2em;
 }

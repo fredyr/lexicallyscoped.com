@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article id="presentation">
+{{ content }}
+
+<!-- <h2>Consulting</h2>
+<p>
+I am an <strong>consultant in software development</strong> and leading agile teams.
+I help businesses make better decisions by
+
+<ul><li>taking advantage of the data they have,</li>
+<li>combining data with expert opinion,</li>
+<li>interpreting the results of analysis.</li>
+</ul>
+</p>
+
+<p>
+I have <strong>10 years experience</strong> of analysing and solving real business problems using software and leading teams. I have worked with customers ranging from small entrepreneurs to large corporations.
+
+If you want to know more, you can <strong>read my CV here</strong> (<a href="#">English</a> | <a href="#">Swedish</a>). 
+<br>
+
+</p><p>
+<strong>
+Please <a href="mailto:fredrik.dyrkell@gmail.com">contact me</a></strong> to discuss whether I can help you.
+
+</p>
+ -->
+</article>
+
+<hr>
+<h3>Blog posts</h3>
+{% for post in site.posts  %}
+<article>
+    <time class="date black" datetime="{{ post.date | xmlschema }}">{{ post.date | date_to_string }}</time>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+</article>
+{% endfor %}
+
