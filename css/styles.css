@@ -17,7 +17,7 @@ h4 {
     margin-bottom: 0.3em;
 }
 
-article > ul {
+article > ul, ol {
     margin: 1em;
 }
 
