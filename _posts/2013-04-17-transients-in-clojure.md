@@ -76,7 +76,7 @@ Clearly there's something else going on here, so let's dig into that a bit. For 
 
 The reason for having this complex implementation is performance. Our naive implementation first creates an immutable list and iterates through the list to create a map. 
 
-The codes uses something called [transients](http://clojure.org/transients) to achieve this performance gain. Rich Hickey is explaining transients in the previous link much better than I can, but the point of transients, is to allow **local** mutability. The input and output of the ``for-map`` are still immutable data - but internally in the function, the structure is created using mutations. 
+The code uses something called [transients](http://clojure.org/transients) to achieve this performance gain. Rich Hickey is explaining transients in the previous link much better than I can, but the point of transients, is to allow **local** mutability. The input and output of the ``for-map`` are still immutable data - but internally in the function, the structure is created using mutations. 
 
 It is done, as we can see in the code, in three steps.
 1. We obtain a mutable reference of the collection using the ``transient`` function
