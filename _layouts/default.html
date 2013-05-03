@@ -4,9 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
         <link rel="alternate" type="application/atom+xml" href="http://www.lexicallyscoped.com/atom.xml">
 
+        <title>{{page.title}} | Lexically scoped, Fredrik Dyrkell</title>
+        <meta property="og:title" content="{{page.title}} | Lexically scoped, Fredrik Dyrkell"/>
+        <meta property="og:description" content="{{page.content|markdownify|truncate:255}}"/>
+        <meta property="og:image" content="/img/lex.png"/>
+
         <link rel="stylesheet" type="text/css" href="/css/styles.css" />
         <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
-        <script src="http://use.edgefonts.net/open-sans.js"></script>
     </head>
     <body>
         <aside>
@@ -24,7 +28,7 @@
                 <span class="tag white">XP</span>
                 <span class="tag gray">Twisted</span>
                 <span class="tag gray">Django</span>
-                <span class="tag white">DSL</span>
+                <span class="tag white">Concurrency/STM</span>
                 <span class="tag white">Domain driven design</span>
                 </p>
                 <p>
@@ -40,6 +44,8 @@
         <section class="container">
         {{ content }}
         </section>
+
+
 
 <script type="text/javascript">
   var _gaq = _gaq || [];

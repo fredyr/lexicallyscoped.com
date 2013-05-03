@@ -4,7 +4,6 @@ html { -webkit-font-smoothing: antialiased; }
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
     color: #343434;
-    /*background: #F0F0F0;*/
     font-size: 1.15em;
 }
 
@@ -12,9 +11,17 @@ h1, h2, h3 {
     font-weight: normal;
     margin-bottom: 0.3em;
 }
+h1 {
+    font-size: 1.5em;
+}
+
 h4 {
     color: #666;
     margin-bottom: 0.3em;
+}
+
+.clearfix {
+    clear: both;
 }
 
 article > ul, ol {
@@ -131,18 +138,13 @@ aside {
     }
     .container {
         margin: 30px;
-        /*top: 80px;*/
         width: auto;
-        /*text-align: center;*/
     }
 }
 
 
 article { margin: 1em 0; font-size: 100%; }
 
-section {
-    /*padding-top: 20px;*/
-}
 /* Embedded youtube clips */
 iframe {
     margin: 1em 2em;

@@ -1,9 +1,9 @@
 ---
 layout: front_page
-
+title: Software Consulting in B2B integration and web technologies
 ---
 
-## Hi, I'm Fredrik Dyrkell
+# Hi, I'm Fredrik Dyrkell
 
 I am a consultant in software development and a team leader.
 

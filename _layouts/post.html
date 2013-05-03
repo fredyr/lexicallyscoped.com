@@ -3,9 +3,11 @@ layout: default
 ---
 
 <article>
-    <h2 class="floating-left">{{ page.title }}</h2>
-    <span class="date red floating-right">{{ page.date | date_to_long_string }}</span> 
-    <p style="clear: both;"></p>
+    <h1 class="floating-left">{{ page.title }}</h1>
+    <time class="date red floating-right" datetime="{{ post.date | xmlschema }}">{{ page.date | date_to_long_string }}</time>
+    <!-- <span class="date red floating-right">{{ page.date | date_to_long_string }}</span>  -->
+    <p class="clearfix"></p>
+
     {{ content }}
 
     <hr>
