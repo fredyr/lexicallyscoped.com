@@ -22,7 +22,7 @@ deployed_files = deploy_to_S3(conn.get_bucket('lexicallyscoped'), folder)
 invalidation_list = [item.replace(folder, '') for item in deployed_files]
 print 'Invalidating cloudfront distribution with {files}'.format(files=invalidation_list)
 cf = boto.connect_cloudfront()
-cf.create_invalidation_request("EFS2Q32WJZQ6C", invalidation_list)
+cf.create_invalidation_request(os.environ['AWS_CLOUDFRONT_ID'], invalidation_list)
 
 
 """
