@@ -5,8 +5,12 @@ layout: default
 <article>
     <h1 class="floating-left">{{ page.title }}</h1>
     <time class="date red floating-right" datetime="{{ post.date | xmlschema }}">{{ page.date | date_to_long_string }}</time>
-    <!-- <span class="date red floating-right">{{ page.date | date_to_long_string }}</span>  -->
     <p class="clearfix"></p>
+    <div class="cta">
+        <img src="/img/twit50.png">
+        <span class="cta-content">Want to discuss the content of this article? <a href="https://twitter.com/lexicallyscoped">Join the conversation on Twitter!</a>
+        </span>
+    </div>
 
     {{ content }}
 

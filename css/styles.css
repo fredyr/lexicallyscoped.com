@@ -36,17 +36,18 @@ aside > ul li {
 }
 
 .highlight {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.1em;
+    overflow: auto;
     background: #242227;
     color: #f8f8f2;
     padding: 1em;
     margin-bottom: 1em;
 }
-
+pre {
+    white-space: pre-wrap;
+}
 .no-decoration { text-decoration: none; }
-
-
 
 hr {
     border: 0;
@@ -115,29 +116,41 @@ aside {
 }
 
 .container {
-    margin-left: 310px;
-    margin-right: 30px;
+    margin-left: 300px;
+    margin-right: 25px;
     position: relative;
 }
-
+.cta {
+    background: #bfbfbf;
+    margin: 1em 0;
+    padding: 0 0.5em;
+}
+.cta-content {
+    position: relative;
+    top: -16px;
+}
 
 @media (max-width: 767px) {
     aside {
         position: relative;
         border: none;
         width: auto;
-        margin: 30px;
+        margin: 10px;
         padding: 0;
         min-height: inherit!important;
         height: auto!important;
         border-bottom: 1px solid lightgray;
     }
+    .highlight {
+        width: auto;
+        padding: 0.5em;
 
+    }
     .hide-mobile {
         display: none;
     }
     .container {
-        margin: 30px;
+        margin: 10px;
         width: auto;
     }
 }
