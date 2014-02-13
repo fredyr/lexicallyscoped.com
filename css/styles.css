@@ -121,13 +121,17 @@ aside {
     position: relative;
 }
 .cta {
-    background: #bfbfbf;
+    background: gray;
+    color: white;
     margin: 1em 0;
     padding: 0 0.5em;
 }
 .cta-content {
     position: relative;
     top: -16px;
+}
+.cta a {
+    color: white;
 }
 
 @media (max-width: 767px) {
