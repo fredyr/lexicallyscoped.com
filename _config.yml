@@ -1,1 +1,6 @@
-pygments: true
+highlighter: 'pygments'
+date_format: "%Y-%m-%d"
+time_format: "%H:%M"
+relative_permalinks: false
+permalink: date
+encoding: ASCII-8BIT

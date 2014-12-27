@@ -47,7 +47,7 @@ I found the following links helpful.
 ### Walkthrough ###
 
 Firstly, the final result can be watched [here](/demo/elm-binclock/),
-and the complete code is found on [Github]().
+and the complete code is found on [Github](https://github.com/fredyr/elm-binclock).
 
 {% highlight haskell %}
 module BinClock where

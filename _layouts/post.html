@@ -4,7 +4,7 @@ layout: default
 
 <article>
     <h1 class="floating-left">{{ page.title }}</h1>
-    <time class="date red floating-right" datetime="{{ post.date | xmlschema }}">{{ page.date | date_to_long_string }}</time>
+    <time class="date red floating-right" datetime="{{ post.date | xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
     <p class="clearfix"></p>
     <div class="cta">
         <img src="/img/twit50.png">

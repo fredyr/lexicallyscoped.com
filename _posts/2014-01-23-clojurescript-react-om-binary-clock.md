@@ -9,7 +9,7 @@ I've continued to play around with [Om](https://github.com/swannodette/om) as it
 
 I thought I'd share a little piece I made -- a simple binary clock. If you haven't encountered them before, the [wikipedia page](http://en.wikipedia.org/wiki/Binary_clock) gives a good description. The variant I have implemented is where hours, minutes and seconds each is represented by two columns: one for each digit. Each column in turn has four bits.
 
-You can find the entire code on [github](https://github.com/fredyr/binclock/blob/master/src/binclock/core.cljs), and an online demo  [here](/demo/binclock/).  
+You can find the entire code on [github](https://github.com/fredyr/binclock/blob/master/src/binclock/core.cljs), and an online demo  [here](/demo/binclock/).
 
 ### Application logic
 
