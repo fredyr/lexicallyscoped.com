@@ -1,10 +1,10 @@
 ---
 layout: post
-title: A brief introduction to OCAml
+title: A brief introduction to OCaml
 
 ---
 
-## Introduction to [OCAml](http://ocaml.org/) ##
+## Introduction to [OCaml](http://ocaml.org/) ##
 
 A couple of weeks ago I did an introductory presentation on [OCaml](http://ocaml.org/)
 at our [local meetup groups](http://www.meetup.com/got-lambda/) [@GotLambda](https://twitter.com/GotLambda).
@@ -243,8 +243,8 @@ let a = 12 in
   each other, we need to explicitly say we want to refer to a name
   recursively: let rec
  *)
-let fac'' n =
-  if n == 0 then 1 else n * fac'' (n - 1)
+let rec fac n =
+  if n == 0 then 1 else n * fac (n - 1)
 
 (* We incidentally introduced conditions above using if expressions *)
 let abs x = if x > 0 then x else -x
