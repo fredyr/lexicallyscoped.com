@@ -80,6 +80,10 @@ www.lexicallyscoped.com
   - Set up your environment
     #use "topfind";;
 
+  - NOTE: all the code examples below assume you're using the ordinary
+    OCaml standard library, and not Core, so ensure you're not
+    including `open Core.Std` in your .ocamlinit to get the same behaviour.
+
 *)
 
 (* Show all packages installed *)
@@ -122,7 +126,12 @@ true;; false;;
 12 + 44;;
 sqrt 5.0;;
 355 / 113;
-355.0 / 113.0;;
+
+(* This won't work, OCaml doesn't overload aritmetic operators. Use /.
+for floating point division *)
+355.0 / 113.0;; (* => Error: This expression has type float but an
+expression was expected of type int *)
+(* Explicit float multiplication works *)
 9.2 *. 3.3;;
 
 (* Boolean operations *)
