@@ -7,10 +7,13 @@ published: true
 
 ## The structure of EDIFACT files
 
-If you're working with EDIinvolved with
-[EDIFACT](https://en.wikipedia.org/wiki/EDIFACT) files
+[EDIFACT](https://en.wikipedia.org/wiki/EDIFACT) is a standardized
+text-based format that enables companies to send business messages
+between each other ([EDI](https://en.wikipedia.org/wiki/Electronic_data_interchange)).
 
-To show you what they look like, here's a small example.
+
+### EDIFACT ORDERS example
+Here's a small example, to give you an idea of what EDIFACT look like.
 
 {% highlight text %}
 UNB+UNOC:3+SE1212121212:ZZZ+DE3434343434:ZZZ+150728:0000+1234567'
@@ -28,7 +31,7 @@ UNZ+1+1234567'
 
 This entire thing is called a **message**. On the second line, you can
 read the message type: ``ORDERS``, a
-[Purchase order message](http://www.unece.org/trade/untdid/d96a/trmd/orders_d.htm).
+[purchase order message](http://www.unece.org/trade/untdid/d96a/trmd/orders_d.htm).
 
 Each line is called a **segment**. The line-breaks are optional, but
 convenient for displaying and reading.
@@ -62,12 +65,12 @@ The tag of this segment is ``LIN``. It has three elements.
    1. "Article #4243"
    2. "SA"
 
-Cross referencing this with the
-[EDIFACT specification](http://www.unece.org/trade/untdid/d96a/trsd/trsdlin.htm)
-tells us that this segment is a *line item* and the item number is 1.
-The third element tells us the item number identification. SA is the
+To interpret what the meaning of the different elements are, we look
+in the [EDIFACT specification](http://www.unece.org/trade/untdid/d96a/trsd/trsdlin.htm)
+which tells us that this segment is a **line item** and the item number is 1.
+The third element is the **item number identification**. "SA" is the
 [item number code](http://www.unece.org/trade/untdid/d96a/uncl/uncl7143.htm)
-which stands for *Supplier's article number*, which in our case was
+which stands for **supplier's article number**, which in our case was
 "Article #4243".
 
 
@@ -77,7 +80,7 @@ In the Clojure world, there exists this very nice parser library
 called [Instaparse](https://github.com/Engelberg/instaparse). It aims
 to let you describe your grammar using standard [EBNF notation](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form), and turn it into an executable parser.
 
-So let's see if we can turn our informal description of EDIFACT
+Step by step, let us turn our informal description of EDIFACT
 segments into simple EBNF notation.
 
 ## EBNF grammar
@@ -111,11 +114,13 @@ escaped chars or ordinary chars to account for escaping (using the
 symbol ? (question mark)). E.g. if a text field contains a colon, it
 should be preceded by a question mark (?:).
 
+## Clojure version of the EBNF grammar
+
 Let's have a look at the definition for our parser in Clojure.
 
 {% highlight clojure %}
-;; You need to require instaparse.core :as insta, see Quickstart in
-;; the [Instaparse documentation](https://github.com/Engelberg/instaparse)
+;; You need to require instaparse.core as insta, see Quickstart in
+;; the Instaparse documentation (https://github.com/Engelberg/instaparse#quickstart)
 (def parser (insta/parser
              "message = segment+
               segment = tag element+ terminator newline?
@@ -136,15 +141,15 @@ Let's have a look at the definition for our parser in Clojure.
               <terminator> = <\"'\">"))
 {% endhighlight %}
 
-The angle brackets on the left side is used for hiding tags in the
-resulting tree, and angle brackets on the right hand side is for
-hiding values. For example, the delimiters are hidden entirely.
+The angle brackets on the left side is used for [hiding tags](https://github.com/Engelberg/instaparse#hiding-tags) in the resulting tree, and angle brackets on the right hand side is for
+[hiding values](https://github.com/Engelberg/instaparse#hiding-content). For example, the delimiters are hidden entirely.
+
 
 In order to preserve the element components correctly in the presence
 of escaped characters, the tags for ``chars``  and ``escaped-char`` are
 left in the parse tree.
 
-The can be collapsed neatly using ``insta/transform``.
+The can be collapsed neatly using [``insta/transform``](https://github.com/Engelberg/instaparse#transforming-the-tree).
 
 {% highlight clojure %}
 (defn run-parser
@@ -199,11 +204,6 @@ UNZ+1+1234567'")
 {% endhighlight %}
 
 
-
-
-
-
-
-
-{% highlight clojure %}
-{% endhighlight %}
+If you have any comments or feedback, don't hesitate to send me an
+[email](mailto:fredrik.dyrkell@gmail.com) or a message on Twitter
+[@lexicallyscoped](https://twitter.com/lexicallyscoped).
